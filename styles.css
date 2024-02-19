@@ -1,0 +1,160 @@
+:root {
+  --color-1: #010a13;
+  --color-2: rgba(120, 112, 122, 1);
+  --color-3: rgba(2, 114, 114, 1);
+  --color-4: #010a14;
+  --color-5: rgba(3, 191, 156, 1);
+}
+
+/* Clases propias ---------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-1);
+  color: var(--color-5);
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  scroll-behavior: smooth;
+}
+
+/* Main -----------------------------------------------*/
+
+img {
+  transition: all 0.3s;
+}
+
+img:hover {
+  transform: scale(0.9);
+}
+
+.nav-color {
+  background: var(--color-4);
+}
+
+.navbar a {
+  color: var(--color-5);
+}
+
+.navbar a:hover {
+  color: var(--color-3);
+}
+
+.introduccion {
+  padding-bottom: 100px;
+}
+
+main .titulo {
+  color: aliceblue;
+}
+
+main .parrafo {
+  color: var(--color-2);
+}
+
+.flecha a {
+  font-size: 2rem;
+  color: var(--color-5);
+  transition: all 0.3s ease-out;
+}
+
+.flecha a:hover {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+/* Section Acerca------------------------------------------------*/
+
+.acerca i {
+  color: var(--color-5);
+}
+
+.acerca span {
+  font-size: 2rem;
+  color: var(--color-5);
+}
+
+.acerca h2 {
+  padding-bottom: 50px;
+  color: aliceblue;
+}
+
+.acerca-desglosado {
+  padding-left: 4rem;
+  padding-bottom: 50px;
+}
+
+.acerca h4 {
+  color: aliceblue;
+  padding-bottom: 10px;
+}
+
+.acerca-desglosado p,
+.acerca-desglosado li {
+  color: var(--color-2);
+}
+
+/* Section Conocimientos------------------------------------------ */
+
+.conocimientos h2 {
+  padding-bottom: 200px;
+  color: aliceblue;
+}
+
+.conocimientos span {
+  font-size: 2rem;
+  color: var(--color-5);
+}
+
+.rueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.conocimientos .flecha {
+  padding-top: 250px;
+}
+
+/* *Section trabajo-------------------------------------------- */
